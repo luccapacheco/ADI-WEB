@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Controle de Estacionamento Condomínio Pedra do Sol</title>
+</head>
+<body>
+    <h1>Controle de Estacionamento Condomínio Pedra do Sol</h1>
+
+    <div class="cadastro">
+        <h2>Reservar Vaga de Estacionamento</h2>
+        <form id="reservation-form">
+           
+            <label for="proprietario">Nome do Proprietário:</label>
+            <input type="text" id="proprietario" required><br>
+            <span  id="proprietario-error" class="error"></span><br>
+
+            <label for="apartamento">Número do Apartamento:</label>
+            <input type="text" id="apartamento" required><br>
+            <span  id="apartamento-error" class="error"></span><br>
+
+            <label for="bloco">Bloco do Apartamento:</label>
+            <input type="text" id="bloco" required><br>
+            <span  id="bloco-error" class="error"></span><br>
+
+            <label for="vaga">Número da Vaga de Estacionamento:</label>
+            <input type="text" id="vaga" required><br>
+            <span  id="vaga-error" class="error"></span><br>
+
+            <label for="placa">Placa do Veículo:</label>
+            <input type="text" id="placa" required><br>
+            <span id="placa-error" class="error"></span><br>
+            
+            <label for="modelo">Modelo do Veículo:</label>
+            <input type="text" id="modelo" required><br>
+            <span  id="modelo-error" class="error"></span><br>
+
+            <label for="cor">Cor do Veículo:</label>
+            <input type="text" id="cor" required><br>
+            <span  id="cor-error" class="error"></span><br>
+
+            
+
+            <form id="reservation-form" onsubmit="return validarFormulario()"></form>
+
+            <button type="button" onclick="cadastrarReserva()">Salvar Reserva</button>
+            
+        </form>
+    </div>
+
+    <div class="listagem">
+        <h2>Listagem de Vagas</h2>
+        <button onclick="listarVagasDisponiveis()">Vagas Disponíveis</button>
+        <ul id="vagas-list">
+            <!-- Aqui serão listadas as vagas cadastradas -->
+        </ul>
+    </div>
+
+    <div class="listagem">
+        <h2>Listagem de Vagas</h2>
+        <button onclick="listarVagasOcupadas()">Vagas Ocupadas</button>
+        <ul id="vagas-list">
+            <!-- Aqui serão listadas as vagas cadastradas -->
+        </ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
